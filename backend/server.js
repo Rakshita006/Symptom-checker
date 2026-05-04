@@ -10,7 +10,11 @@ dotenv.config()
 
 const app=express()
 
-app.use(cors())
+app.use(cors({
+  origin:[ 'https://symptom-checker-lime-psi.vercel.app',
+    'http://localhost:5173'
+  ]
+}))
 
 app.use(express.json())
 
